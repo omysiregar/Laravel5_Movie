@@ -31,6 +31,7 @@ php artisan db:seed
 - ![tampilan login](image.png)
 - ![tampilan Homepage](Screenshot_1.png)
 - ![tampilan Deatail](Screenshot_3.png)
+- ![Favorite List](image-1.png)
 ---
 
 ## ℹ️ Fitur

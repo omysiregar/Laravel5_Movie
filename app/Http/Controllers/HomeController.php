@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Favorite;
 use Illuminate\Support\Facades\Auth;
-
+use GuzzleHttp\Client;
 
 class HomeController extends Controller
 {
@@ -60,7 +60,16 @@ class HomeController extends Controller
         return response()->json($favorites);
     }
 
-    public function show($imdb_id) {
+    public function show($imdb_id)
+    {
         return view('detail_movie', compact('imdb_id'));
+    }
+
+    public function favorite_list()
+    {
+        $client = new Client();
+        $userId = auth()->id();
+        $favorites =Favorite::where('user_id', $userId)->pluck('imdb_id');
+        return view('favorite', compact('favorites'));
     }
 }

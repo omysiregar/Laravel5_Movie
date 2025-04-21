@@ -12,12 +12,14 @@
 */
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\LoginController@login');
+Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/', 'HomeController@index')->name('.index');
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'HomeController@index')->name('.index');
     Route::post('/favorite', 'HomeController@favorite')->name('favorite.add');
     Route::post('/unfavorite', 'HomeController@unfavorite')->name('favorite.remove');
     Route::get('/favorites', 'HomeController@getFavorites')->name('favorite.list');
+    Route::get('/favorites_daftar', 'HomeController@favorite_list')->name('favorites_daftar');
     Route::get('/movie/{imdb_id}', 'HomeController@show')->name('movie.detail');
 });
 

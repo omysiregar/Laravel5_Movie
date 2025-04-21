@@ -24,8 +24,52 @@
         body {
             background-color: #141414;
             color: white;
+            padding-top: 70px;
+        }
+
+        .navbar-custom {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            backdrop-filter: blur(8px);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
         }
     </style>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="#">Romy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('favorites_daftar') }}">Favorite Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                            {{ csrf_field() }}
+                            <button type="submit" class="nav-link btn btn-link"
+                                style="color: white; text-decoration: none;">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Content -->
     <div>
         @yield('content')
     </div>
