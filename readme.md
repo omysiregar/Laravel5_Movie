@@ -3,7 +3,7 @@
 ## ℹ️ Informasi
 
 - Laravel 5
-- PHP 7++
+- PHP 7++ (yang saya gunakan 7.4)
 
 ---
 
@@ -39,6 +39,8 @@ php artisan db:seed
 - bisa menyimpan Favorite movie
 - dan dengan mengklik judul bisa ke halaman detail
 - pada home page menggunakan lazyload , dan jika user ingin melihat data lanjutan tinggal melakukan scroll page
+- menggunakan data movie dari OMDb API 
+- dan auth dari laravel menggunakan middleware bawaan laravel. tapi tidak ada role akses.
 ---
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
