@@ -38,6 +38,7 @@ php artisan db:seed
 
 - bisa menyimpan Favorite movie
 - dan dengan mengklik judul bisa ke halaman detail
+- pada home page menggunakan lazyload , dan jika user ingin melihat data lanjutan tinggal melakukan scroll page
 ---
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
